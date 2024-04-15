@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="Contact-form-to-email.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Font Awesome for icons -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('R.jpg');
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+  .container {
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    margin: 20px auto;
+    z-index: 1;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  textarea {
+  height: 70px;
+}
+
+  .back-arrow {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+  }
+
+  .close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  .interaction-button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .interaction-button.email {
+    background-color: #3498db;
+    color: white;
+  }
+
+  .interaction-button.whatsapp {
+    background-color: #2ecc71;
+    color: white;
+  }
+
+  .interaction-button:hover {
+    background-color: #2980b9;
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .lastline {
+    position: relative;
+    padding-bottom: 20px;
+    color: var(--accentColor);
+    font-size: 1rem;
+    display: block;
+    font-family: var(--font);
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(90deg, var(--bgColor), var(--accentColor), var(--bgColor));
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear var(--delay) infinite;
+    background-clip: text;
+    z-index: 2;
+}  
+</style>
+</head>
+<body>
+<div class="main">
+  <div class="container">
+    <i class="fas fa-arrow-left back-arrow" onclick="goBack()"></i>
+    <h2>How can I help U</h2>
+    <form onsubmit="showPopup(); return false;">
+      <input type="text" id="name" placeholder="Name" name="name" required>
+       <input type="text" id="phone" placeholder="Phone (Optional)" name="phone" required>
+      <input type="email" id="email" placeholder="Email" name="email" required>
+      <textarea name="text" id="message" rows="10" placeholder="Your Message"></textarea>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+
+   <div class="container">
+     <a style="color: aquamarine; href="https://play.google.com/store/apps/details?id=com.akashdipmahapatra.freecad">install From PlayStore</a><br>
+    <!--<a" href="https://play.google.com/apps/testing/com.akashdipmahapatra.freecad">Register as a Beta devloper</a><br>-->
+  </div>
+  <div class="lastline"><a href="https://akashdip2001.github.io/website-2/">Akashdip Mahapatra</a></div>
+</div>
+  <script src="Contact-form-to-email.js"></script>
+  <script src="whatsapp.js"></script>
+  <script>
+    function showPopup() {
+      swal({
+        title: "Choose Contact Method",
+        text: "How would you like to be contacted?",
+        buttons: {
+          email: {
+            text: "Contact via Email",
+            value: "email",
+            className: "interaction-button email", // Add custom class for styling
+          },
+          whatsapp: {
+            text: "Contact via WhatsApp",
+            value: "whatsapp",
+            className: "interaction-button whatsapp", // Add custom class for styling
+          },
+        },
+        closeOnClickOutside: false,
+        content: {
+          element: "div",
+          attributes: {
+            innerHTML: '<i class="fas fa-times close-icon" onclick="closePopup()"></i>',
+          },
+        },
+      }).then((value) => {
+        if (value === "email") {
+          emailSend();
+        } else if (value === "whatsapp") {
+          sendToWhatsapp();
+        }
+      });
+    }
+
+    function goBack() {
+      // window.history.back(); // Go back to the previous page
+      window.open('https://akashdip2001.github.io/linktree/', '_blank');
+    }
+
+    function closePopup() {
+      swal.close(); // Close the popup
+    }
+  </script>
+</body>
+</html>
