@@ -2,13 +2,13 @@ function emailSend() {
 	var userName = document.getElementById('name').value;
 	var phone = document.getElementById('phone').value;
 	var email = document.getElementById('email').value;
-	var Ulink = document.getElementById('URL').value;
+	var appurl = document.getElementById('URL').value;
 	var message = document.getElementById('message').value;
   
 	var messageBody = "Name: " + userName +
 	  "<br/> Phone: " + phone +
 	  "<br/> Email: " + email +
-	  "<br/> URL: " + Ulink +
+	  "<br/> URL: " + appurl +
 	  "<br/> Message: " + message;
   
 	Email.send({
