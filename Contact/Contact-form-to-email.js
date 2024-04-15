@@ -13,7 +13,7 @@ function emailSend() {
   
 	Email.send({
 		SecureToken: "f1fd93e4-78df-4474-8db5-80daf880c520",
-		To: "mail.me.akashdip2001@gmail.com",
+		To: email,
 		From: "mail.me.akashdip2001@gmail.com",
 		Subject: "mail for public App - google play console",
 		Body: messageBody
