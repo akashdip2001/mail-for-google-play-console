@@ -3,12 +3,14 @@ function emailSend() {
 	var phone = document.getElementById('phone').value;
 	var email = document.getElementById('email').value;
 	var appurl = document.getElementById('URL').value;
+	var SourceCodeurl = document.getElementById('URL1').value;
 	var message = document.getElementById('message').value;
   
 	var messageBody = "Name: " + userName +
 	  "<br/> Phone: " + phone +
 	  "<br/> Email: " + email +
-	  "<br/> URL: " + appurl +
+	  "<br/> App_URL: " + appurl +
+	  "<br/> SourceCode_URL: " + SourceCodeurl +
 	  "<br/> Message: " + message;
   
 	Email.send({
