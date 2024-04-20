@@ -3,11 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="Contact-form-to-email.css">
+<!--<link rel="stylesheet" href="Contact-form-to-email.css">-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Font Awesome for icons -->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <style>
+ * {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
   body {
     margin: 0;
     padding: 0;
@@ -18,10 +23,7 @@
     overflow: hidden;
   }
 
-  .main {
-    display: flex;
-    flex-direction: column;
-  }
+  /* Container styles */
   .container {
     width: 100%;
     max-width: 400px;
@@ -34,28 +36,52 @@
     z-index: 1;
   }
 
-  h2 {
-    margin-bottom: 20px;
+  /* Input and textarea styles */
+  .container input,
+  .container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.55);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
   }
 
-  textarea {
-  height: 70px;
-}
+  /* Button styles */
+  .btn {
+    border: none !important;
+    cursor: pointer;
+    margin: 15px 0;
+    font-size: 16px;
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    background-image: linear-gradient(-180deg, #41cce2, #3d0f56);
+  }
 
-  .back-arrow {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+  .btn:hover {
+    background-color: #1f7d5f;
+    color: white;
+  }
+
+  /* SweetAlert button style */
+  .swal-button {
+    background-color: #ab4173;
+    color: #fff;
+    border: none;
+    box-shadow: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 24px;
+    margin: 0;
     cursor: pointer;
   }
 
-  .close-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-  }
-
+  /* Additional styles */
   .interaction-button {
     padding: 10px 20px;
     margin: 5px;
@@ -80,11 +106,6 @@
     background-color: #2980b9;
   }
 
-  a {
-    text-decoration: none;
-    font-weight: bold;
-  }
-
   .lastline {
     position: relative;
     padding-bottom: 20px;
@@ -101,13 +122,25 @@
     animation: animate 3s linear var(--delay) infinite;
     background-clip: text;
     z-index: 2;
-} 
-
+  }
 
   p {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adjust the values as needed */
-}
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adjust the values as needed */
+  }
 
+  .back-arrow {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+  }
+
+  .close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
 </style>
 </head>
 <body>
