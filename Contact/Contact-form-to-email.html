@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!--<link rel="stylesheet" href="Contact-form-to-email.css">-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <style>
@@ -23,7 +23,6 @@
     overflow: hidden;
   }
 
-  /* Container styles */
   .container {
     width: 100%;
     max-width: 400px;
@@ -36,7 +35,6 @@
     z-index: 1;
   }
 
-  /* Input and textarea styles */
   .container input,
   .container textarea {
     width: 100%;
@@ -50,7 +48,10 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
   }
 
-  /* Button styles */
+    textarea {
+  height: 70px;
+}
+
   .btn {
     border: none !important;
     cursor: pointer;
@@ -67,7 +68,6 @@
     color: white;
   }
 
-  /* SweetAlert button style */
   .swal-button {
     background-color: #ab4173;
     color: #fff;
@@ -81,7 +81,6 @@
     cursor: pointer;
   }
 
-  /* Additional styles */
   .interaction-button {
     padding: 10px 20px;
     margin: 5px;
@@ -125,7 +124,7 @@
   }
 
   p {
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adjust the values as needed */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   }
 
   .back-arrow {
