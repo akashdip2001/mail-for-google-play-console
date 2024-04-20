@@ -14,16 +14,17 @@
   background-image: url('your_background_image.jpg'); /* Replace 'your_background_image.jpg' with your actual background image */
   background-size: cover;
   background-position: center;
-  filter: brightness(0.3) blur(5px); /* Adjust the values to your preference */
+  filter: brightness(0.5); /* Adjust the brightness value (0 to 1) to darken the background image */
 }
-  
-  .container {
+
+.container {
   width: 350px;
   background-color: rgba(255, 255, 255, 0.7); /* Adjust the alpha value to control the transparency */
   border-radius: 5px;
   padding: 20px;
   text-align: center;
 }
+
   
   /* Add styles for input elements */
   .container input,textarea {
