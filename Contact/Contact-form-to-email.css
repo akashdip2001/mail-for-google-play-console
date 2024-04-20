@@ -11,10 +11,10 @@
   align-items: center;
   justify-content: center;
   background-color: #092448;
-  background-image: url('R.jpg'); /* Replace 'your_background_image.jpg' with your actual background image */
+  background-image: url('your_background_image.jpg'); /* Replace 'your_background_image.jpg' with your actual background image */
   background-size: cover;
   background-position: center;
-  filter: brightness(0.5); /* Adjust the brightness value (0 to 1) to darken the background image */
+  filter: brightness(0.3) blur(5px); /* Adjust the values to your preference */
 }
 
 .container {
@@ -24,6 +24,7 @@
   padding: 20px;
   text-align: center;
 }
+
 
   
   /* Add styles for input elements */
