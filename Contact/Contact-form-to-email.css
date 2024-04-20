@@ -3,23 +3,27 @@
 	font-family: 'Poppins', sans-serif;
   }
   
-  body {
-	margin: 0;
-	padding: 0;
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: #092448;
-  }
+ body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #092448;
+  background-image: url('your_background_image.jpg'); /* Replace 'your_background_image.jpg' with your actual background image */
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.3) blur(5px); /* Adjust the values to your preference */
+}
   
   .container {
-	width: 350px;
-	background-color: white;
-	border-radius: 5px;
-	padding: 20px;
-	text-align: center;
-  }
+  width: 350px;
+  background-color: rgba(255, 255, 255, 0.7); /* Adjust the alpha value to control the transparency */
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+}
   
   /* Add styles for input elements */
   .container input,textarea {
