@@ -21,8 +21,8 @@ function sendToWhatsapp() {
   
 	// Create an anchor element for the clickable link
 	var link = document.createElement('a');
-	link.href = "https://sites.google.com/view/freecadapp-downlod/home"; // Set the link href
-	link.innerHTML = "If the WhatsApp does not open<br>update the app 14/02/24<br>Click here";
+	link.href = "https://www.linkedin.com/posts/akashdip2001_the-video-specially-for-all-1st-year-students-activity-7197123849455349762-r7ql"; // Set the link href
+	link.innerHTML = "install my app<br>from Google play store<br>Click here";
 	//link.style.color = "red"; // Set the color to red
 	link.style.textDecoration = "none"; // Remove underline
 	link.style.marginTop = "10px"; // Set margin top
