@@ -159,7 +159,7 @@
             <!-- Payment Buttons -->
             <div class="buttons">
                 <a class="button upi shiny-button" data-bs-toggle="modal" data-bs-target="#paymentModal">Pay via UPI</a>
-                <a class="button whatsapp shiny-button" href="https://wa.me/917076033011" target="_blank">WhatsApp Me</a>
+                <a class="button whatsapp shiny-button" data-bs-toggle="modal" data-bs-target="#whatsappModal">Publish my App</a>
             </div>
         </div>
     </div>
@@ -183,6 +183,26 @@
     </div>
 </div>
 
+<!-- WhatsApp Options Modal -->
+<div class="modal fade" id="whatsappModal" tabindex="-1" aria-labelledby="whatsappModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="whatsappModalLabel">Choose an Option</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <p>Please choose what you would like to do:</p>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <a href="next.html" class="btn btn-primary">New App Upload</a>
+                    <a href="https://wa.me/917076033011" target="_blank" class="btn btn-success">Update My Old App</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
 <footer data-aos="">
     <p>Created by Akashdip Mahapatra, 2024 Sep</p>
 </footer>
